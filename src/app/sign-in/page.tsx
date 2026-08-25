@@ -6,7 +6,7 @@ import { GOOGLE_PLAY_URL } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Sign in",
-  description: "Sign in to your Finora account.",
+  description: "Sign in to your Myndivo account.",
 };
 
 export default function SignInPage() {
@@ -14,7 +14,7 @@ export default function SignInPage() {
     <AuthShell
       eyebrow="Welcome back"
       title="Sign in on Android"
-      subtitle="Open Finora to access your study plan and account securely."
+      subtitle="Open Myndivo to access your study plan and account securely."
       footer={
         <>
           Having trouble signing in?{" "}
@@ -26,7 +26,7 @@ export default function SignInPage() {
     >
       <div className="space-y-4">
         <ButtonLink href={GOOGLE_PLAY_URL} className="w-full">
-          Open Finora on Google Play
+          Open Myndivo on Google Play
         </ButtonLink>
         <p className="text-center text-xs leading-5 text-ink-soft">
           For your security, this public website does not collect account

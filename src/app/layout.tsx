@@ -19,11 +19,11 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
   ),
   title: {
-    default: "Finora — The AI study companion that gets you to mastery",
-    template: "%s · Finora",
+    default: "Myndivo — The AI study companion that gets you to mastery",
+    template: "%s · Myndivo",
   },
   description:
-    "Finora turns your notes and materials into adaptive quizzes, flashcards, and a focus-first study plan — with an AI tutor that knows exactly what to teach you next.",
+    "Myndivo turns your notes and materials into adaptive quizzes, flashcards, and a focus-first study plan — with an AI tutor that knows exactly what to teach you next.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

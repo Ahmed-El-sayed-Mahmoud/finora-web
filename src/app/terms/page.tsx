@@ -4,7 +4,7 @@ import { SUPPORT_EMAIL } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "The terms that govern your use of Finora.",
+  description: "The terms that govern your use of Myndivo.",
 };
 
 export default function TermsPage() {
@@ -13,7 +13,7 @@ export default function TermsPage() {
       <section>
         <h2>1. Acceptance of terms</h2>
         <p>
-          By creating an account or using Finora&apos;s website or mobile app
+          By creating an account or using Myndivo&apos;s website or mobile app
           (together, the &quot;Service&quot;), you agree to these Terms of
           Service. If you don&apos;t agree, please don&apos;t use the
           Service.
@@ -38,7 +38,7 @@ export default function TermsPage() {
           billed through Google Play, renew automatically for the billing
           period shown at checkout, and continue until cancelled in your Google
           Play subscription settings. Cancelling stops future renewal and you
-          keep paid access through the current billing period. Deleting Finora
+          keep paid access through the current billing period. Deleting Myndivo
           does not automatically cancel a Google Play subscription.
         </p>
         <p>
@@ -72,9 +72,9 @@ export default function TermsPage() {
       <section>
         <h2>6. AI-generated content</h2>
         <p>
-          Finora uses AI to generate quizzes, flashcards, study plans, and
+          Myndivo uses AI to generate quizzes, flashcards, study plans, and
           tutor responses based on your materials. AI output can be
-          incomplete or inaccurate. Finora is a study aid and is not a
+          incomplete or inaccurate. Myndivo is a study aid and is not a
           substitute for professional, medical, legal, or financial advice,
           and you should verify important information independently. You can
           report an AI response from the flag action shown below that response
@@ -96,7 +96,7 @@ export default function TermsPage() {
         <p>
           The Service is provided &quot;as is&quot; without warranties of any
           kind. To
-          the fullest extent permitted by law, Finora is not liable for
+          the fullest extent permitted by law, Myndivo is not liable for
           indirect, incidental, or consequential damages arising from your
           use of the Service.
         </p>

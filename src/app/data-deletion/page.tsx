@@ -6,7 +6,7 @@ import { SUPPORT_EMAIL, supportMailto } from "@/config/site";
 export const metadata: Metadata = {
   title: "Account & Data Deletion",
   description:
-    "How to delete your Finora account and data, in the app or without it installed.",
+    "How to delete your Myndivo account and data, in the app or without it installed.",
 };
 
 export default function DataDeletionPage() {
@@ -15,7 +15,7 @@ export default function DataDeletionPage() {
       <section>
         <h2>Delete your account from the app</h2>
         <p>
-          Open Finora, go to <strong>Profile → Settings → Account → Delete
+          Open Myndivo, go to <strong>Profile → Settings → Account → Delete
           account</strong>, and confirm both deletion prompts. This starts
           deletion immediately — you don&apos;t need to contact support.
         </p>
@@ -26,7 +26,7 @@ export default function DataDeletionPage() {
         <p>
           If you no longer have the app installed, email{" "}
           <a
-            href={supportMailto("Finora account deletion request")}
+            href={supportMailto("Myndivo account deletion request")}
             className="text-ink underline underline-offset-2"
           >
             {SUPPORT_EMAIL}
@@ -39,7 +39,7 @@ export default function DataDeletionPage() {
       <section>
         <h2>Cancel a subscription separately</h2>
         <p>
-          Deleting your Finora account does not cancel a Google Play
+          Deleting your Myndivo account does not cancel a Google Play
           subscription. Cancel it first in <strong>Google Play → Payments &amp;
           subscriptions → Subscriptions</strong> to stop future charges. You can
           still request account deletion if a subscription is active.
@@ -63,7 +63,7 @@ export default function DataDeletionPage() {
           use of the one-time free trial, we retain one-way keyed hashes derived
           from the Android device identifier and normalized account email,
           together with the trial start and highest lifetime trial usage. These
-          records are no longer linked to a Finora account, do not contain the
+          records are no longer linked to a Myndivo account, do not contain the
           raw device identifier or email, and cannot reconstruct your study
           materials or activity. We retain them for as long as the one-time
           trial restriction is offered or as otherwise needed to prevent abuse.

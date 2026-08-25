@@ -16,7 +16,7 @@ export function Logo({ className = "" }: { className?: string }) {
         priority
         className="h-9 w-9"
       />
-      Finora
+      Myndivo
     </Link>
   );
 }

@@ -7,7 +7,7 @@ import { GOOGLE_PLAY_URL } from "@/config/site";
 export const metadata: Metadata = {
   title: "Create your account",
   description:
-    "Start your 7-day free trial of Finora — no credit card required.",
+    "Start your 7-day free trial of Myndivo — no credit card required.",
 };
 
 export default function RegisterPage() {
@@ -15,7 +15,7 @@ export default function RegisterPage() {
     <AuthShell
       eyebrow="7-day free trial"
       title="Start in the Android app"
-      subtitle="Create your account securely in Finora. No credit card is required for the seven-day trial."
+      subtitle="Create your account securely in Myndivo. No credit card is required for the seven-day trial."
       footer={
         <>
           Need help?{" "}
@@ -27,11 +27,11 @@ export default function RegisterPage() {
     >
       <div className="space-y-4">
         <ButtonLink href={GOOGLE_PLAY_URL} className="w-full">
-          Get Finora on Google Play
+          Get Myndivo on Google Play
         </ButtonLink>
         <p className="text-center text-xs leading-5 text-ink-soft">
           Accounts, purchases, and sign-in are handled in the Android app. This
-          website will never ask for your Finora password.
+          website will never ask for your Myndivo password.
         </p>
       </div>
     </AuthShell>

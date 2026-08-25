@@ -6,7 +6,7 @@ import { GOOGLE_PLAY_URL } from "@/config/site";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Simple pricing for Finora — start with a 7-day free trial, then pick the plan that fits how you study.",
+    "Simple pricing for Myndivo — start with a 7-day free trial, then pick the plan that fits how you study.",
 };
 
 const plans = [

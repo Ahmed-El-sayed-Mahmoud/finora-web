@@ -1,6 +1,6 @@
-# Finora Android — Google Play release checklist
+# Myndivo Android — Google Play release checklist
 
-Reviewed 25 August 2026 for package `com.ahmed_elsayed.aistudymate`.
+Reviewed 25 August 2026 for package `com.ahmed_elsayed.myndivo`.
 This checklist reduces policy risk but cannot guarantee approval; Google reviews
 the uploaded App Bundle, Play Console answers, store listing, reviewer access,
 and actual behavior together.
@@ -24,7 +24,7 @@ and actual behavior together.
 - Configure Google Play products and RevenueCat, then test localized pricing,
   purchase, renewal, cancellation, expiry, account hold, and Restore purchases.
 - Complete content rating, target audience, ads, health, and AI-generated-content
-  declarations accurately. Finora should be described as a study/focus tool,
+  declarations accurately. Myndivo should be described as a study/focus tool,
   not a medical treatment or cure.
 - If the Play developer account is a personal account created after 13 November
   2023, run a closed test with at least 12 testers continuously opted in for 14
@@ -34,7 +34,7 @@ and actual behavior together.
 
 ## Strong Lock declarations
 
-Finora is **not** an accessibility tool. Its optional Strong Lock uses an
+Myndivo is **not** an accessibility tool. Its optional Strong Lock uses an
 AccessibilityService to identify the foreground app only during a user-started,
 timed session. Complete the AccessibilityService declaration and provide a
 narrated video showing:

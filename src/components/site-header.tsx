@@ -32,7 +32,7 @@ export function SiteHeader() {
           >
             Android app
           </Link>
-          <ButtonLink href={GOOGLE_PLAY_URL}>Get Finora</ButtonLink>
+          <ButtonLink href={GOOGLE_PLAY_URL}>Get Myndivo</ButtonLink>
         </div>
       </Container>
     </header>

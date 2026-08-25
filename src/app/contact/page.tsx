@@ -5,7 +5,7 @@ import { SUPPORT_EMAIL } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Contact us",
-  description: "Get in touch with the Finora team.",
+  description: "Get in touch with the Myndivo team.",
 };
 
 export default function ContactPage() {

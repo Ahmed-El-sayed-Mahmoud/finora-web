@@ -32,13 +32,13 @@ const steps = [
     step: "01",
     title: "Upload what you're studying",
     description:
-      "PDFs, slides, photos of notes, even scanned pages — Finora reads them and pulls out the concepts that matter.",
+      "PDFs, slides, photos of notes, even scanned pages — Myndivo reads them and pulls out the concepts that matter.",
   },
   {
     step: "02",
     title: "Get a plan built around you",
     description:
-      "Finora turns your materials into a study plan, adaptive quizzes, and flashcards tuned to your current mastery level.",
+      "Myndivo turns your materials into a study plan, adaptive quizzes, and flashcards tuned to your current mastery level.",
   },
   {
     step: "03",
@@ -85,7 +85,7 @@ export default function Home() {
             >
               <Image
                 src={finnHero}
-                alt="Finn, the Finora fox, studying with a notebook and pen"
+                alt="Finn, the Myndivo fox, studying with a notebook and pen"
                 width={280}
                 priority
                 className="h-auto w-56"
@@ -112,7 +112,7 @@ export default function Home() {
       <section className="border-b border-line/70">
         <Container className="py-20 sm:py-24">
           <h2 className="max-w-lg font-serif text-3xl font-semibold tracking-tight text-ink">
-            How Finora works
+            How Myndivo works
           </h2>
           <div className="mt-12 grid gap-10 sm:grid-cols-3">
             {steps.map((s) => (

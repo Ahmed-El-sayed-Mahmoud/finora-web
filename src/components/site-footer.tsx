@@ -33,7 +33,7 @@ export function SiteFooter() {
         <div className="max-w-xs">
           <Logo />
           <p className="mt-4 text-sm leading-6 text-ink-soft">
-            Finora is the AI study companion that turns your notes into
+            Myndivo is the AI study companion that turns your notes into
             mastery — adaptive quizzes, focus tools, and a tutor that knows
             what you actually need to learn next.
           </p>
@@ -57,7 +57,7 @@ export function SiteFooter() {
         ))}
       </Container>
       <Container className="flex flex-col gap-2 border-t border-line/70 py-6 text-xs text-ink-soft sm:flex-row sm:items-center sm:justify-between">
-        <p>© {new Date().getFullYear()} Finora. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Myndivo. All rights reserved.</p>
         <p>Made for people who actually want to remember what they study.</p>
       </Container>
     </footer>

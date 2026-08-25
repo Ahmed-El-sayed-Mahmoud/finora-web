@@ -1,7 +1,7 @@
-# Finora website
+# Myndivo website
 
 Public marketing, support, privacy, terms, and account-deletion pages for the
-Finora Android app (`com.ahmed_elsayed.aistudymate`).
+Myndivo Android app (`com.ahmed_elsayed.myndivo`).
 
 ## Local development
 
@@ -26,7 +26,7 @@ or output settings are required. Set `NEXT_PUBLIC_SITE_URL` to the final HTTPS
 production origin, without a trailing slash, for example:
 
 ```text
-NEXT_PUBLIC_SITE_URL=https://finora.example.com
+NEXT_PUBLIC_SITE_URL=https://myndivo.example.com
 ```
 
 After deployment, Google Play Console should use these public URLs (replace

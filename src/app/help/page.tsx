@@ -4,14 +4,14 @@ import { ButtonLink } from "@/components/button-link";
 
 export const metadata: Metadata = {
   title: "Help center",
-  description: "Answers to common questions about Finora.",
+  description: "Answers to common questions about Myndivo.",
 };
 
 const faqs = [
   {
-    question: "What is Finora?",
+    question: "What is Myndivo?",
     answer:
-      "Finora is an AI study companion. Upload your notes, slides, or textbooks and it turns them into adaptive quizzes, flashcards, and a study plan tuned to what you already know — with an AI tutor to help you close the gaps.",
+      "Myndivo is an AI study companion. Upload your notes, slides, or textbooks and it turns them into adaptive quizzes, flashcards, and a study plan tuned to what you already know — with an AI tutor to help you close the gaps.",
   },
   {
     question: "How does the 7-day free trial work?",
@@ -31,12 +31,12 @@ const faqs = [
   {
     question: "What can I upload?",
     answer:
-      "PDFs, slide decks, photos of handwritten or printed notes, and scanned pages. Finora reads the content and extracts the concepts it needs to build your plan.",
+      "PDFs, slide decks, photos of handwritten or printed notes, and scanned pages. Myndivo reads the content and extracts the concepts it needs to build your plan.",
   },
   {
-    question: "Which devices does Finora support?",
+    question: "Which devices does Myndivo support?",
     answer:
-      "Finora is available on Android. Account deletion is available inside the app, subscriptions are managed through Google Play, and this website provides support and legal information.",
+      "Myndivo is available on Android. Account deletion is available inside the app, subscriptions are managed through Google Play, and this website provides support and legal information.",
   },
 ];
 

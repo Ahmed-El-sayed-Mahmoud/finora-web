@@ -5,7 +5,7 @@ import { ANDROID_PACKAGE, SUPPORT_EMAIL } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "How Finora collects, uses, shares, retains, and protects data.",
+  description: "How Myndivo collects, uses, shares, retains, and protects data.",
 };
 
 export default function PrivacyPage() {
@@ -14,9 +14,9 @@ export default function PrivacyPage() {
       <section>
         <h2>1. Scope and developer contact</h2>
         <p>
-          This Privacy Policy applies to the Finora Android application
-          (package <strong>{ANDROID_PACKAGE}</strong>) and the Finora website
-          (together, the &quot;Service&quot;). Finora is an AI study partner. For
+          This Privacy Policy applies to the Myndivo Android application
+          (package <strong>{ANDROID_PACKAGE}</strong>) and the Myndivo website
+          (together, the &quot;Service&quot;). Myndivo is an AI study partner. For
           privacy questions or requests, contact the developer at{" "}
           <a
             href={`mailto:${SUPPORT_EMAIL}`}
@@ -34,7 +34,7 @@ export default function PrivacyPage() {
           <strong>Account and profile information:</strong> your name, email
           address, profile photo if supplied by a sign-in provider, Firebase
           user identifier, authentication provider, and account preferences.
-          Password credentials are handled by Firebase Authentication; Finora
+          Password credentials are handled by Firebase Authentication; Myndivo
           does not store your password on its own servers.
         </p>
         <p>
@@ -68,7 +68,7 @@ export default function PrivacyPage() {
         </p>
         <p>
           <strong>Purchase information:</strong> Google Play product,
-          subscription, renewal, cancellation, and entitlement status. Finora
+          subscription, renewal, cancellation, and entitlement status. Myndivo
           does not receive your full payment-card number.
         </p>
         <p>
@@ -90,7 +90,7 @@ export default function PrivacyPage() {
       <section>
         <h2>4. Android permissions and on-device access</h2>
         <p>
-          Finora asks for camera access only when you take a study photo and
+          Myndivo asks for camera access only when you take a study photo and
           microphone access only when you start a voice feature. Selected
           photos, documents, and audio may be uploaded for the feature you
           requested. Gallery selection uses Android&apos;s system picker and does
@@ -106,8 +106,8 @@ export default function PrivacyPage() {
           Strong Lock asks separately for display-over-other-apps,
           Accessibility, app-usage access, notification, and Do Not Disturb
           access. During an active Strong Lock, Accessibility and usage access
-          detect which app is in front so Finora can return you to the session.
-          Finora does not retrieve screen content or press controls through the
+          detect which app is in front so Myndivo can return you to the session.
+          Myndivo does not retrieve screen content or press controls through the
           Accessibility service. Detected app names remain on the device; only
           the number of blocked distractions is saved with study progress.
           These capabilities are inactive when Strong Lock is not running and
@@ -134,7 +134,7 @@ export default function PrivacyPage() {
         <p>
           We do not sell personal information and do not use it for third-party
           advertising. We disclose only the data needed for providers to perform
-          services for Finora, including:
+          services for Myndivo, including:
         </p>
         <ul>
           <li>
@@ -207,7 +207,7 @@ export default function PrivacyPage() {
       <section>
         <h2>9. Your choices and rights</h2>
         <p>
-          You can change notification and device permissions in Finora or
+          You can change notification and device permissions in Myndivo or
           Android settings, choose whether to upload content, report AI output,
           and delete your account in the app. Depending on where you live, you
           may also request access, correction, export, restriction, objection,
@@ -219,7 +219,7 @@ export default function PrivacyPage() {
       <section>
         <h2>10. Children&apos;s privacy</h2>
         <p>
-          Finora is not directed to children under 13, and we do not knowingly
+          Myndivo is not directed to children under 13, and we do not knowingly
           collect personal information from children under 13. If you believe a
           child under 13 has provided information, contact us so we can review
           and delete it.
