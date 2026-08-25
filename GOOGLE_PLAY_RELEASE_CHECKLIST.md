@@ -26,6 +26,11 @@ and actual behavior together.
 - Complete content rating, target audience, ads, health, and AI-generated-content
   declarations accurately. Finora should be described as a study/focus tool,
   not a medical treatment or cure.
+- If the Play developer account is a personal account created after 13 November
+  2023, run a closed test with at least 12 testers continuously opted in for 14
+  days, then apply for production access.
+- Complete the developer identity/device verification tasks shown on the Play
+  Console dashboard and keep the public developer email operational.
 
 ## Strong Lock declarations
 
@@ -53,3 +58,5 @@ feature videos. Remove any type that the production app does not genuinely use.
 - [AccessibilityService](https://support.google.com/googleplay/android-developer/answer/10964491)
 - [Foreground services](https://support.google.com/googleplay/android-developer/answer/13392821)
 - [Sensitive permissions and minimum-scope alternatives](https://support.google.com/googleplay/android-developer/answer/16558241)
+- [Testing requirements for new personal accounts](https://support.google.com/googleplay/android-developer/answer/14151465)
+- [Developer identity verification](https://support.google.com/googleplay/android-developer/answer/10841920)
