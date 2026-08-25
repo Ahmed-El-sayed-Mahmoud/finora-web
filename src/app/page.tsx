@@ -1,69 +1,150 @@
 import Image from "next/image";
+import { Container } from "@/components/container";
+import { ButtonLink } from "@/components/button-link";
+import finnHero from "../../public/finn-hero.png";
+import { GOOGLE_PLAY_URL } from "@/config/site";
+
+const features = [
+  {
+    title: "Adaptive quizzes & flashcards",
+    description:
+      "Every question is generated from your own materials and adjusts to what you've actually mastered — no generic question banks.",
+  },
+  {
+    title: "A tutor that remembers your gaps",
+    description:
+      "Chat with an AI tutor that tracks concept-level coverage across every session, so it always knows what to teach you next.",
+  },
+  {
+    title: "Focus tools that stick",
+    description:
+      "A guided focus-dose ladder and distraction lock help you build attention back up instead of fighting your phone alone.",
+  },
+  {
+    title: "Study plans with real checkpoints",
+    description:
+      "Steps only complete when you pass a short checkpoint quiz — no boxes ticked just for showing up.",
+  },
+];
+
+const steps = [
+  {
+    step: "01",
+    title: "Upload what you're studying",
+    description:
+      "PDFs, slides, photos of notes, even scanned pages — Finora reads them and pulls out the concepts that matter.",
+  },
+  {
+    step: "02",
+    title: "Get a plan built around you",
+    description:
+      "Finora turns your materials into a study plan, adaptive quizzes, and flashcards tuned to your current mastery level.",
+  },
+  {
+    step: "03",
+    title: "Study, check in, improve",
+    description:
+      "Track coverage per concept, keep your streak alive, and let the plan adjust as you get stronger.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <>
+      <section className="border-b border-line/70">
+        <Container className="grid gap-12 py-20 sm:py-28 md:grid-cols-2 md:items-center">
+          <div>
+            <span className="inline-flex items-center rounded-full bg-gold/15 px-3 py-1 text-xs font-medium uppercase tracking-wide text-gold">
+              Your 7-day free trial starts today
+            </span>
+            <h1 className="mt-6 font-serif text-4xl font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl">
+              The AI study companion that actually gets you to mastery.
+            </h1>
+            <p className="mt-6 max-w-md text-lg leading-7 text-ink-soft">
+              Turn your notes, slides, and textbooks into adaptive quizzes,
+              flashcards, and a focus-first plan — guided by a tutor that
+              knows exactly what you still need to learn.
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <ButtonLink href={GOOGLE_PLAY_URL}>Get the Android app</ButtonLink>
+              <ButtonLink href="/pricing" variant="secondary">
+                See pricing
+              </ButtonLink>
+            </div>
+            <p className="mt-4 text-xs text-ink-soft">
+              No credit card required · Cancel anytime
+            </p>
+          </div>
+          <div className="rounded-3xl border border-line bg-cream-2/60 p-8">
+            <div
+              className="relative -mt-4 mb-2 flex justify-center"
+              style={{
+                background:
+                  "radial-gradient(ellipse at center, rgba(212,98,74,0.16) 0%, rgba(212,98,74,0) 70%)",
+              }}
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+              <Image
+                src={finnHero}
+                alt="Finn, the Finora fox, studying with a notebook and pen"
+                width={280}
+                priority
+                className="h-auto w-56"
+              />
+            </div>
+            <p className="font-serif text-sm uppercase tracking-widest text-terracotta">
+              Built around
+            </p>
+            <ul className="mt-6 space-y-5">
+              {features.map((f) => (
+                <li key={f.title} className="flex gap-3">
+                  <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-terracotta" />
+                  <span className="text-sm leading-6 text-ink-soft">
+                    <span className="font-medium text-ink">{f.title}.</span>{" "}
+                    {f.description}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Container>
+      </section>
+
+      <section className="border-b border-line/70">
+        <Container className="py-20 sm:py-24">
+          <h2 className="max-w-lg font-serif text-3xl font-semibold tracking-tight text-ink">
+            How Finora works
+          </h2>
+          <div className="mt-12 grid gap-10 sm:grid-cols-3">
+            {steps.map((s) => (
+              <div key={s.step}>
+                <span className="font-serif text-sm text-terracotta">
+                  {s.step}
+                </span>
+                <h3 className="mt-3 text-lg font-semibold text-ink">
+                  {s.title}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-ink-soft">
+                  {s.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section>
+        <Container className="py-20 text-center sm:py-24">
+          <h2 className="mx-auto max-w-xl font-serif text-3xl font-semibold tracking-tight text-ink">
+            Study smarter, not just longer.
+          </h2>
+          <p className="mx-auto mt-4 max-w-md text-ink-soft">
+            Start your 7-day free trial — no credit card required.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+          <div className="mt-8 flex justify-center">
+            <ButtonLink href={GOOGLE_PLAY_URL}>Open Google Play</ButtonLink>
+          </div>
+        </Container>
+      </section>
+    </>
   );
 }
