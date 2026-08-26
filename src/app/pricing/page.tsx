@@ -17,46 +17,46 @@ const plans = [
     annualPrice: null,
     description: "A useful study companion you can keep using for free.",
     features: [
-      "50 Basic tutor messages / month",
-      "25 upload pages / month",
-      "30 quiz & flashcard items / month",
-      "2 tutor photos + 1 AI study plan / month",
-      "2 courses, 25 documents & 30 saved notes",
+      "100 flexible AI credits / month",
+      "30 upload pages / month",
+      "0.25 GB storage",
+      "9 core answer formats",
+      "Up to 2 courses",
       "Unlimited focus sessions",
     ],
     highlight: false,
   },
   {
     name: "Scholar",
-    price: "$12.99",
+    price: "$11.99",
     cadence: "month",
-    annualPrice: "$124.99 / year",
+    annualPrice: "$119.99 / year",
     description: "Complete advanced study support for a full semester.",
     features: [
-      "300 Advanced tutor messages / month",
+      "2,700 flexible AI credits / month on monthly or annual billing",
       "All 16 advanced answer formats",
-      "500 upload pages + 200 practice items / month",
-      "15 voice minutes + 25 tutor photos / month",
-      "5 AI study-plan generations / month",
-      "10 courses, 150 documents & 200 saved notes",
-      "10 active plans + unlimited focus sessions",
+      "600 upload pages / month with dense-page protection",
+      "5 GB storage",
+      "Unlimited courses",
+      "Tutor, quizzes, flashcards, voice, images and plans share one wallet",
+      "Unlimited focus sessions",
     ],
     highlight: true,
   },
   {
     name: "Mastery",
-    price: "$24.99",
+    price: "$19.99",
     cadence: "month",
-    annualPrice: "$239.99 / year",
+    annualPrice: "$199.99 / year",
     description: "The same complete tutor with much more room for exam season.",
     features: [
-      "600 Advanced tutor messages / month",
+      "4,500 flexible AI credits / month on monthly or annual billing",
       "The same 16 advanced answer formats as Scholar",
-      "1,200 upload pages + 500 practice items / month",
-      "40 voice minutes + 75 tutor photos / month",
-      "10 AI study-plan generations / month",
-      "25 courses, 500 documents & 1,000 saved notes",
-      "25 active plans + unlimited focus sessions",
+      "1,200 upload pages / month with dense-page protection",
+      "15 GB storage",
+      "Unlimited courses",
+      "Tutor, quizzes, flashcards, voice, images and plans share one wallet",
+      "Unlimited focus sessions",
     ],
     highlight: false,
   },
@@ -73,9 +73,9 @@ export default function PricingPage() {
           Simple pricing, real results.
         </h1>
         <p className="mt-4 text-ink-soft">
-          Every new account starts with a 7-day trial: 70 Advanced tutor
-          messages, all 16 answer formats, 50 upload pages, 30 practice items,
-          and 2 voice minutes. No credit card required.
+          Every new account starts with a 7-day trial: 500 flexible AI credits,
+          all 16 answer formats, 100 upload pages, 0.5 GB storage, and unlimited
+          focus sessions. No credit card required.
         </p>
       </div>
 
