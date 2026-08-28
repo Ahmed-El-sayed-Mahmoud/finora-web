@@ -16,12 +16,12 @@ const faqs = [
   {
     question: "How does the 7-day free trial work?",
     answer:
-      "Every new account gets 7 days with the complete Advanced tutor: 70 messages (up to 15 a day), all 16 answer formats, 50 upload pages, 30 practice items, 2 voice minutes, 5 tutor photos, and one AI study-plan generation. No credit card is required, and the account moves to Free when the trial ends.",
+      "Every new account gets 7 days with the complete Advanced tutor: 500 flexible AI credits, all 16 answer formats, 100 upload pages, 0.5 GB storage, up to 2 courses, and unlimited focus sessions. The tutor, quizzes, flashcards, voice and images all draw from the one credit pool. No credit card is required, and the account moves to Free when the trial ends.",
   },
   {
     question: "Can I cancel anytime?",
     answer:
-      "Yes. You can cancel from your account settings at any time and you'll keep access through the end of your current billing period — no cancellation fees.",
+      "Yes. Cancel any time in Google Play → Payments & subscriptions → Subscriptions, and you'll keep access through the end of your current billing period — no cancellation fees. Deleting your Myndivo account does not cancel the subscription, so cancel it there first.",
   },
   {
     question: "Is my study data private?",
