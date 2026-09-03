@@ -51,7 +51,7 @@ export default function TermsPage() {
       <section>
         <h2>4. Acceptable use</h2>
         <p>
-          You agree not to misuse the Service — including attempting to
+          You agree not to misuse the Service, including attempting to
           disrupt it, reverse-engineer it, generate prohibited or harmful
           content, cheat or facilitate academic dishonesty, or use it to
           violate any law or another person&apos;s rights.

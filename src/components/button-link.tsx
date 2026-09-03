@@ -5,9 +5,9 @@ type Variant = "primary" | "secondary" | "ghost";
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-terracotta text-cream hover:bg-terracotta-dark",
+    "bg-ink text-cream shadow-[0_10px_30px_rgba(23,24,25,0.16)] hover:bg-terracotta-dark",
   secondary:
-    "bg-transparent text-ink border border-ink/15 hover:border-ink/30 hover:bg-ink/[0.03]",
+    "bg-surface text-ink shadow-[inset_0_0_0_1px_rgba(23,24,25,0.1)] hover:bg-cream-2",
   ghost: "bg-transparent text-ink-soft hover:text-ink",
 };
 
@@ -25,9 +25,19 @@ export function ButtonLink({
   return (
     <Link
       href={href}
-      className={`inline-flex h-11 items-center justify-center rounded-full px-6 text-sm font-medium transition-colors ${variants[variant]} ${className}`}
+      className={`group inline-flex min-h-12 items-center justify-center gap-3 whitespace-nowrap rounded-full px-3 pl-6 text-sm font-bold transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-0.5 active:translate-y-px ${variants[variant]} ${className}`}
     >
-      {children}
+      <span>{children}</span>
+      {variant !== "ghost" ? (
+        <span
+          aria-hidden="true"
+          className={`flex h-8 w-8 items-center justify-center rounded-full transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-0.5 ${
+            variant === "primary" ? "bg-white/12" : "bg-ink/[0.06]"
+          }`}
+        >
+          ↗
+        </span>
+      ) : null}
     </Link>
   );
 }

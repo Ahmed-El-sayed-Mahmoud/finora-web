@@ -7,7 +7,7 @@ import { GOOGLE_PLAY_URL } from "@/config/site";
 export const metadata: Metadata = {
   title: "Create your account",
   description:
-    "Start your 7-day free trial of Myndivo — no credit card required.",
+    "Start your 7-day free trial of Myndivo. No credit card required.",
 };
 
 export default function RegisterPage() {

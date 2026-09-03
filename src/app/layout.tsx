@@ -1,29 +1,29 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
-import { SiteHeader } from "@/components/site-header";
+import { Bricolage_Grotesque, Manrope } from "next/font/google";
 import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader } from "@/components/site-header";
 import "./globals.css";
 
-const bodyFont = Inter({
+const bodyFont = Manrope({
   variable: "--font-body",
   subsets: ["latin"],
 });
 
-const displayFont = Playfair_Display({
+const displayFont = Bricolage_Grotesque({
   variable: "--font-display",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
+    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   ),
   title: {
-    default: "Myndivo — Study with Focus",
-    template: "%s · Myndivo",
+    default: "Myndivo - Study Without Distractions",
+    template: "%s | Myndivo",
   },
   description:
-    "Lock in with focus sessions, then turn your own notes, slides, and textbooks into adaptive quizzes, flashcards, and a study plan — with an AI tutor that knows exactly what to teach you next.",
+    "Block distracting apps, turn your own materials into practice, and always know what to study next with Myndivo.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

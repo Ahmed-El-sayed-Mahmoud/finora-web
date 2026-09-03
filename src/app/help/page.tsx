@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Container } from "@/components/container";
 import { ButtonLink } from "@/components/button-link";
+import { Container } from "@/components/container";
 
 export const metadata: Metadata = {
   title: "Help center",
@@ -11,27 +11,27 @@ const faqs = [
   {
     question: "What is Myndivo?",
     answer:
-      "Myndivo is an AI study companion. Upload your notes, slides, or textbooks and it turns them into adaptive quizzes, flashcards, and a study plan tuned to what you already know — with an AI tutor to help you close the gaps.",
+      "Myndivo is an AI study companion. Upload your notes, slides, or textbooks and turn them into adaptive quizzes, flashcards, and a study plan tuned to what you already know. Finn, your AI tutor, helps you close the gaps.",
   },
   {
     question: "How does the 7-day free trial work?",
     answer:
-      "Every new account gets 7 days with the complete Advanced tutor: 500 flexible AI credits, all 16 answer formats, 100 upload pages, 0.5 GB storage, up to 2 courses, and unlimited focus sessions. The tutor, quizzes, flashcards, voice and images all draw from the one credit pool. No credit card is required, and the account moves to Free when the trial ends.",
+      "Every new account gets 7 days with the complete Advanced tutor: 500 flexible AI credits, all 16 answer formats, 100 upload pages, 0.5 GB storage, up to 2 courses, and unlimited focus sessions. No credit card is required. The account moves to Free when the trial ends.",
   },
   {
     question: "Can I cancel anytime?",
     answer:
-      "Yes. Cancel any time in Google Play → Payments & subscriptions → Subscriptions, and you'll keep access through the end of your current billing period — no cancellation fees. Deleting your Myndivo account does not cancel the subscription, so cancel it there first.",
+      "Yes. Cancel in Google Play under Payments & subscriptions, then Subscriptions. You keep access through your current billing period with no cancellation fees. Deleting your Myndivo account does not cancel the subscription, so cancel it there first.",
   },
   {
     question: "Is my study data private?",
     answer:
-      "Your materials and study data are used to power your own study plan and are not shared with other users. See our Privacy Policy for the full details on what we collect and how it's used.",
+      "Your materials and study data power your own study plan and are not shared with other users. Read the Privacy Policy for full details on what we collect and how it is used.",
   },
   {
     question: "What can I upload?",
     answer:
-      "PDFs, slide decks, photos of handwritten or printed notes, and scanned pages. Myndivo reads the content and extracts the concepts it needs to build your plan.",
+      "Upload PDFs, slide decks, photos of handwritten or printed notes, and scanned pages. Myndivo reads the content and extracts the concepts needed to build your plan.",
   },
   {
     question: "Which devices does Myndivo support?",
@@ -42,43 +42,42 @@ const faqs = [
 
 export default function HelpPage() {
   return (
-    <Container className="py-20 sm:py-24">
-      <div className="mx-auto max-w-xl text-center">
-        <span className="text-xs font-medium uppercase tracking-wide text-terracotta">
-          Help center
-        </span>
-        <h1 className="mt-2 font-serif text-4xl font-semibold tracking-tight text-ink">
-          Frequently asked questions
-        </h1>
-        <p className="mt-4 text-ink-soft">
-          Can&apos;t find what you&apos;re looking for? Reach out and we&apos;ll help.
-        </p>
-      </div>
+    <Container className="py-20 sm:py-28">
+      <div className="grid gap-14 lg:grid-cols-[0.72fr_1.28fr] lg:gap-24">
+        <div className="lg:sticky lg:top-32 lg:self-start">
+          <p className="eyebrow">Help center</p>
+          <h1 className="mt-5 max-w-[9ch] font-display text-[clamp(3.5rem,7vw,6.5rem)] font-[750] leading-[0.92] tracking-[-0.06em] text-ink">
+            Questions, answered clearly.
+          </h1>
+          <p className="mt-6 max-w-sm leading-7 text-ink-soft">
+            Get quick answers here, or talk to us if your account needs a human.
+          </p>
+          <ButtonLink href="/contact" className="mt-8">
+            Contact support
+          </ButtonLink>
+        </div>
 
-      <div className="mx-auto mt-12 max-w-2xl divide-y divide-line">
-        {faqs.map((faq) => (
-          <details key={faq.question} className="group py-5">
-            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-medium text-ink marker:content-none">
-              {faq.question}
-              <span className="shrink-0 text-terracotta transition-transform group-open:rotate-45">
-                +
-              </span>
-            </summary>
-            <p className="mt-3 text-sm leading-6 text-ink-soft">
-              {faq.answer}
-            </p>
-          </details>
-        ))}
-      </div>
-
-      <div className="mx-auto mt-14 flex max-w-2xl flex-col items-center gap-4 rounded-3xl border border-line bg-cream-2/60 p-10 text-center">
-        <h2 className="font-serif text-xl font-semibold text-ink">
-          Still need help?
-        </h2>
-        <p className="text-sm text-ink-soft">
-          Our team is happy to help with anything account or billing related.
-        </p>
-        <ButtonLink href="/contact">Contact support</ButtonLink>
+        <div className="rounded-[30px] bg-surface px-6 py-4 shadow-[inset_0_0_0_1px_rgba(23,24,25,0.06)] sm:px-9">
+          {faqs.map((faq) => (
+            <details
+              key={faq.question}
+              className="group py-7 shadow-[inset_0_-1px_0_rgba(23,24,25,0.08)] last:shadow-none"
+            >
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 font-display text-lg font-bold tracking-[-0.025em] text-ink marker:content-none sm:text-xl">
+                {faq.question}
+                <span
+                  aria-hidden="true"
+                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-cream-2 text-xl text-ink transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-open:rotate-45"
+                >
+                  +
+                </span>
+              </summary>
+              <p className="mt-4 max-w-2xl pr-12 text-sm leading-7 text-ink-soft">
+                {faq.answer}
+              </p>
+            </details>
+          ))}
+        </div>
       </div>
     </Container>
   );

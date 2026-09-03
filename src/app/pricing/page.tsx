@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Container } from "@/components/container";
 import { ButtonLink } from "@/components/button-link";
+import { Container } from "@/components/container";
 import { GOOGLE_PLAY_URL } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Simple pricing for Myndivo — start with a 7-day free trial, then pick the plan that fits how you study.",
+    "Start Myndivo with a 7-day free trial, then choose the plan that fits how you study.",
 };
 
 const plans = [
@@ -17,8 +17,8 @@ const plans = [
     annualPrice: null,
     description: "A useful study companion you can keep using for free.",
     features: [
-      "100 flexible AI credits / month",
-      "30 upload pages / month",
+      "100 flexible AI credits each month",
+      "30 upload pages each month",
       "0.25 GB storage",
       "9 core answer formats",
       "Up to 2 courses",
@@ -31,14 +31,13 @@ const plans = [
     price: "$11.99",
     cadence: "month",
     annualPrice: "$119.99 / year",
-    description: "Complete advanced study support for a full semester.",
+    description: "Complete study support for a full semester.",
     features: [
-      "2,700 flexible AI credits / month on monthly or annual billing",
+      "2,700 flexible AI credits each month",
       "All 16 advanced answer formats",
-      "600 upload pages / month with dense-page protection",
-      "5 GB storage",
-      "Unlimited courses",
-      "Tutor, quizzes, flashcards, voice, images and plans share one wallet",
+      "600 upload pages with dense-page protection",
+      "5 GB storage and unlimited courses",
+      "Tutor, quizzes, flashcards, voice, images, and plans",
       "Unlimited focus sessions",
     ],
     highlight: true,
@@ -48,14 +47,13 @@ const plans = [
     price: "$19.99",
     cadence: "month",
     annualPrice: "$199.99 / year",
-    description: "The same complete tutor with much more room for exam season.",
+    description: "More room for exam season and demanding courses.",
     features: [
-      "4,500 flexible AI credits / month on monthly or annual billing",
-      "The same 16 advanced answer formats as Scholar",
-      "1,200 upload pages / month with dense-page protection",
-      "15 GB storage",
-      "Unlimited courses",
-      "Tutor, quizzes, flashcards, voice, images and plans share one wallet",
+      "4,500 flexible AI credits each month",
+      "All 16 advanced answer formats",
+      "1,200 upload pages with dense-page protection",
+      "15 GB storage and unlimited courses",
+      "Tutor, quizzes, flashcards, voice, images, and plans",
       "Unlimited focus sessions",
     ],
     highlight: false,
@@ -64,79 +62,102 @@ const plans = [
 
 export default function PricingPage() {
   return (
-    <Container className="py-20 sm:py-24">
-      <div className="mx-auto max-w-xl text-center">
-        <span className="text-xs font-medium uppercase tracking-wide text-terracotta">
-          Pricing
-        </span>
-        <h1 className="mt-2 font-serif text-4xl font-semibold tracking-tight text-ink">
-          Simple pricing, real results.
-        </h1>
-        <p className="mt-4 text-ink-soft">
-          Every new account starts with a 7-day trial: 500 flexible AI credits,
-          all 16 answer formats, 100 upload pages, 0.5 GB storage, and unlimited
-          focus sessions. No credit card required.
-        </p>
-      </div>
+    <Container className="py-20 sm:py-28">
+      <section className="pricing-intro">
+        <div>
+          <p className="eyebrow">Simple pricing</p>
+          <h1 className="pricing-title">
+            Simple plans. Serious focus.
+          </h1>
+        </div>
+        <div className="rounded-[30px] bg-surface p-8 shadow-[inset_0_0_0_1px_rgba(23,24,25,0.06)] sm:p-10">
+          <h2 className="font-display text-2xl font-bold tracking-[-0.035em]">
+            Every account starts complete.
+          </h2>
+          <p className="mt-4 max-w-xl leading-7 text-ink-soft">
+            Try all 16 answer formats, 500 AI credits, 100 upload pages,
+            unlimited focus sessions, and up to 2 courses for 7 days.
+          </p>
+          <p className="mt-6 text-sm font-bold text-terracotta-dark">
+            No credit card required.
+          </p>
+        </div>
+      </section>
 
-      <div className="mt-14 grid gap-6 md:grid-cols-3">
+      <section className="pricing-grid">
         {plans.map((plan) => (
-          <div
+          <article
             key={plan.name}
-            className={`flex flex-col rounded-3xl border p-8 ${
+            className={`rounded-[30px] p-[7px] ${
               plan.highlight
-                ? "border-terracotta bg-white shadow-[0_8px_30px_rgba(212,98,74,0.12)]"
-                : "border-line bg-white/60"
+                ? "pricing-featured bg-ink shadow-[0_30px_80px_rgba(23,24,25,0.18)]"
+                : "bg-ink/[0.055]"
             }`}
           >
-            {plan.highlight ? (
-              <span className="mb-4 inline-flex w-fit items-center rounded-full bg-terracotta/10 px-3 py-1 text-xs font-medium text-terracotta">
-                Most popular
-              </span>
-            ) : null}
-            <h2 className="font-serif text-xl font-semibold text-ink">
-              {plan.name}
-            </h2>
-            <p className="mt-1 text-sm text-ink-soft">{plan.description}</p>
-            <p className="mt-6 flex items-baseline gap-1">
-              <span className="font-serif text-4xl font-semibold text-ink">
-                {plan.price}
-              </span>
-              <span className="text-sm text-ink-soft">
-                {plan.price === "$0" ? plan.cadence : `/${plan.cadence}`}
-              </span>
-            </p>
-            {plan.annualPrice ? (
-              <p className="mt-2 text-sm font-medium text-terracotta">
-                or {plan.annualPrice}
-              </p>
-            ) : null}
-            <ul className="mt-6 flex-1 space-y-3">
-              {plan.features.map((feature) => (
-                <li
-                  key={feature}
-                  className="flex items-start gap-2.5 text-sm text-ink-soft"
-                >
-                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta" />
-                  {feature}
-                </li>
-              ))}
-            </ul>
-            <ButtonLink
-              href={GOOGLE_PLAY_URL}
-              variant={plan.highlight ? "primary" : "secondary"}
-              className="mt-8 w-full"
+            <div
+              className={`flex min-h-[610px] flex-col rounded-[24px] p-7 sm:p-8 ${
+                plan.highlight ? "bg-ink text-cream" : "bg-surface text-ink"
+              }`}
             >
-              Choose in the Android app
-            </ButtonLink>
-          </div>
-        ))}
-      </div>
+              <div className="flex items-start justify-between gap-4">
+                <h2 className="font-display text-2xl font-bold tracking-[-0.035em]">
+                  {plan.name}
+                </h2>
+                {plan.highlight ? (
+                  <span className="rounded-full bg-cream px-3 py-1 text-[0.68rem] font-extrabold uppercase tracking-[0.1em] text-ink">
+                    Most popular
+                  </span>
+                ) : null}
+              </div>
 
-      <p className="mx-auto mt-10 max-w-lg text-center text-xs text-ink-soft">
-        Prices shown in USD; Google Play displays the final localized price.
-        Cancel anytime from your account settings — you&apos;ll keep access
-        through the end of your current billing period.
+              <p className={`mt-3 text-sm leading-6 ${plan.highlight ? "text-cream/70" : "text-ink-soft"}`}>
+                {plan.description}
+              </p>
+
+              <p className="mt-8 flex items-end gap-2">
+                <span className="font-display text-5xl font-[750] tracking-[-0.055em]">
+                  {plan.price}
+                </span>
+                <span className={`pb-1 text-sm ${plan.highlight ? "text-cream/70" : "text-ink-soft"}`}>
+                  {plan.price === "$0" ? plan.cadence : `/${plan.cadence}`}
+                </span>
+              </p>
+
+              {plan.annualPrice ? (
+                <p className={`mt-2 text-sm font-bold ${plan.highlight ? "text-[#f2a38f]" : "text-terracotta-dark"}`}>
+                  or {plan.annualPrice}
+                </p>
+              ) : null}
+
+              <ul className="mt-8 space-y-3.5">
+                {plan.features.map((feature) => (
+                  <li
+                    key={feature}
+                    className={`flex gap-3 text-sm leading-6 ${plan.highlight ? "text-cream/78" : "text-ink-soft"}`}
+                  >
+                    <span aria-hidden="true" className={plan.highlight ? "text-[#f2a38f]" : "text-terracotta-dark"}>
+                      ✓
+                    </span>
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <ButtonLink
+                href={GOOGLE_PLAY_URL}
+                variant={plan.highlight ? "secondary" : "primary"}
+                className={`mt-auto w-full ${plan.highlight ? "bg-cream hover:bg-white" : ""}`}
+              >
+                Get Myndivo
+              </ButtonLink>
+            </div>
+          </article>
+        ))}
+      </section>
+
+      <p className="mx-auto mt-14 max-w-xl text-center text-xs leading-6 text-ink-soft">
+        Prices are shown in USD. Google Play displays your localized price.
+        Cancel anytime and keep access through your current billing period.
       </p>
     </Container>
   );

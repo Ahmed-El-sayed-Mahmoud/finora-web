@@ -16,7 +16,7 @@ export default function DataDeletionPage() {
         <h2>Delete your account from the app</h2>
         <p>
           Open Myndivo, go to <strong>Profile → Account → Delete account</strong>,
-          and confirm both deletion prompts. This starts deletion immediately —
+          and confirm both deletion prompts. This starts deletion immediately,
           you don&apos;t need to contact support. If you have a subscription,
           cancel it first (see below).
         </p>
@@ -81,7 +81,7 @@ export default function DataDeletionPage() {
           >
             {SUPPORT_EMAIL}
           </a>{" "}
-          — see our{" "}
+          . See our{" "}
           <Link href="/privacy" className="text-ink underline underline-offset-2">
             Privacy Policy
           </Link>{" "}

@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local visual-QA exports and disposable headless-browser profiles.
+/artifacts/
+/.tmp-edge-*/
+/.tmp-firefox-*/
+/.edge-*/

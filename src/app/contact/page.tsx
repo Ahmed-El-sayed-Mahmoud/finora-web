@@ -13,7 +13,7 @@ export default function ContactPage() {
     <AuthShell
       eyebrow="Contact"
       title="Get in touch"
-      subtitle="Questions about your account, billing, or anything else — we're here to help."
+      subtitle="Questions about your account, billing, or anything else? We're here to help."
       footer={`Support email: ${SUPPORT_EMAIL}`}
     >
       <ContactForm />
